@@ -3,7 +3,7 @@ import { Header } from '../header/header';
 import { Footer } from '../footer/footer';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../services/user-service';
 @Component({
   selector: 'app-login',
@@ -11,7 +11,8 @@ import { UserService } from '../services/user-service';
     Header,
     Footer,
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   templateUrl: './login.html',
   styleUrl: './login.css',
