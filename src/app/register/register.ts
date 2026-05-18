@@ -29,6 +29,7 @@ export class Register implements OnInit{
   }
   constructor(private userservice:UserService, private cd: ChangeDetectorRef, private router:Router){}
   register(){
+    console.log("register function");
     if(this.user.username==""){
       this.nameField.nativeElement.focus();
     }
