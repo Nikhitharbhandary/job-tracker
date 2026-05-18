@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
   templateUrl: './header.html',
   styleUrl: './header.css',
