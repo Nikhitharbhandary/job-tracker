@@ -1,0 +1,99 @@
+
+<div class="d-flex dashboard_container">
+  <app-sidebar></app-sidebar>
+
+  <div class="flex-grow-1 p-4">
+    <div class="d-flex  justify-content-between">
+      <h2 class="mb-4 text-center "> Dashboard</h2>
+      <button class=" form_button_add text-end" (click)="addapplication()">Add Application </button>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-md-2">
+        <div class="col_container ">
+          <p class="p_heading">Total Applications</p>
+          <p>{{ totalJobs }}</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="col_container ">
+          <p class="p_heading">📝 Applied</p>
+          <p>{{ appliedCount }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="col_container">
+          <p class="p_heading">🎯 Interview</p>
+          <p>{{ interviewCount }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="col_container ">
+          <p class="p_heading">❌ Rejected</p>
+          <p>{{ rejectedCount }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="col_container">
+          <p class="p_heading">🏆 Offer</p>
+          <p>{{ offerCount }}</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- GRAPH + UPCOMING INTERVIEW -->
+<div class="row mt-4">
+
+  <!-- Application Status Graph -->
+  <div class="col-md-6">
+
+    <div class="dashboard_box">
+
+      <h5 class="mb-4">Application Status</h5>
+
+      <canvas id="jobChart"></canvas>
+
+    </div>
+
+  </div>
+  <div class="col-md-6">
+
+    <div class="dashboard_box">
+
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h5>Upcoming Interviews</h5>
+      </div>
+
+      <div
+        class="interview_card"
+        *ngFor="let job of jobs"
+      >
+
+        <ng-container *ngIf="job.status === 'Interview'">
+          <div>
+            <h6> {{ job.role }}</h6>
+            <p>{{ job.cname }}</p>
+          </div>
+
+          <div class="text-end">
+            <span> {{ job.applied_date | date:'dd MMM yyyy' }}</span><br>
+          </div>
+
+        </ng-container>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+  </div>
+</div>
+
+<app-footer />

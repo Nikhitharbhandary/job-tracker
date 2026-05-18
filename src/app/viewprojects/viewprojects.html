@@ -1,0 +1,26 @@
+<app-header/>
+<div class="container-fluid">
+    <div class="heading_container text-center">
+        <h2 class="heading">Product Details</h2>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <th>Sl no</th>
+            <th> Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products; let i=index">
+                <td>{{i+1}}</td>
+                <td> {{product.name}} </td>
+                <td class="text-end"> {{product.price | number:'1.2-2'}}</td>
+                <td class="action_row d-flex gap-3 text-center">
+                    <a (click)="editProduct(product.id)">Edit</a>
+                    <a (click)="editProduct(product.id)">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-footer/>

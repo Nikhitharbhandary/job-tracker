@@ -1,0 +1,23 @@
+.heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: hsl(196, 69%, 36%);
+    display: inline-block;
+    border-bottom: 2px solid hsl(196, 69%, 36%);
+    padding-bottom: 4px;
+}
+.action_row{
+  
+}
+.action_row a{
+    text-decoration: none;
+    color: hsl(196, 69%, 36%);
+    font-weight: bold;
+    cursor: pointer;
+}
+.action_row a:hover{
+    text-decoration: none;
+    color: hsl(0, 80%, 57%);
+    font-weight: bold;
+    cursor: pointer;
+}

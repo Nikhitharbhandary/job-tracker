@@ -1,0 +1,28 @@
+<div class="d-flex sidebar_container">
+  <div class="bg-light text-black p-3 vh-100" style="width: 220px;">
+    <h4 class="text-center">Job Tracker</h4>
+    <hr>
+    <ul class="nav  flex-column mb-auto">
+      <li class="nav-item">
+        <a routerLink="/dashboard" routerLinkActive="active" class="nav-link text-black">
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/job-list']" routerLinkActive="active" class="nav-link text-black">
+          My Jobs
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/add-job']" routerLinkActive="active" class="nav-link text-black">
+          Add Job
+        </a>
+      </li>
+      <li>
+        <button  class="nav-link text-black" (click)="logout()" style="cursor:pointer;">
+          Logout
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

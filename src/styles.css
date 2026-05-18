@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.logo_image{
+    width: 15%;
+}
+.navbar-brand{
+    font-weight: bold;
+}
+.add_gap{
+    margin-top: 100px;
+}

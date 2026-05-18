@@ -1,0 +1,18 @@
+.form_button{
+    background-color:hsl(196, 69%, 36%);
+    border: 1px solid rgb(58, 58, 58);
+    padding: 10px 25px;
+    font-weight: bold;
+    color: white;
+}
+.form_container{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: hsl(196, 69%, 36%);
+    display: inline-block;
+    border-bottom: 2px solid hsl(196, 69%, 36%);
+    padding-bottom: 4px;
+}

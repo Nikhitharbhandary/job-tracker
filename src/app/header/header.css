@@ -1,0 +1,10 @@
+.header_navbar{
+    justify-content: center !important;
+}
+.header_flex{
+    justify-content: space-between;
+    display: flex;
+}
+.nav-link{
+    padding: 20px;
+}

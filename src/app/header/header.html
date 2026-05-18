@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class=" header_flex">
+ <a class="navbar-brand" href="#"><img src="images/logo-1.png" class="logo_image img-fluid" alt="">Job Tracker</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    </div>
+   
+    <div class="collapse navbar-collapse header_navbar" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="/about-us">About us</a>
+        <a class="nav-link" href="/contact">Contact</a>
+        <a *ngIf="!islogin" class="nav-link" href="login">Login</a>
+        <button *ngIf="islogin" (click)="logout()" class="nav-link">Logout</button>
+
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,34 @@
+<app-dashboard-header/>
+<div class="container-fluid add_gap">
+    <div class="heading_container text-center">
+        <h2 class="heading">Job Details</h2>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <th>Sl no</th>
+            <th> Company Name</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let job of jobs; let i=index">
+                <td>{{i+1}}</td>
+                <td> {{job.cname}} </td>
+                <td class="text-end"> {{job.role}}</td>
+                <td class="text-end"> {{job.status}}</td>
+                <td class="action_row d-flex gap-3 text-center">
+                    <a (click)="editProduct(job.id)">Edit</a>
+                    <a (click)="editProduct(job.id)">Delete</a>
+                </td>
+            </tr>
+            <tr *ngIf="!jobs || jobs.length === 0">
+                <td colspan="5" class="text-center py-3 no_record">
+                    📭 No Record Found
+                </td>
+            </tr>
+            <button class="btn form_button" (click)="back()"> Back &#8594;</button>
+        </tbody>
+    </table>
+</div>
+<app-footer/>

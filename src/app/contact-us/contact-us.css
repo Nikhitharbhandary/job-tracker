@@ -1,0 +1,47 @@
+.contact_section{
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.contact_left{
+  background: linear-gradient(135deg,#5b5ff8,#9333ea);
+}
+
+.contact_tag{
+  background: rgba(255,255,255,0.2);
+  padding: 8px 18px;
+  border-radius: 30px;
+  width: fit-content;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.info_item{
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.custom_input{
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: none;
+}
+
+.custom_input:focus{
+  border-color: #5b5ff8;
+  box-shadow: none;
+}
+
+.send_btn{
+  background: linear-gradient(135deg,#5b5ff8,#9333ea);
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+}
+
+.send_btn:hover{
+  color: white;
+}

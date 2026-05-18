@@ -1,0 +1,12 @@
+.header_navbar{
+    justify-content: center !important;
+}
+.heder_right{
+
+}
+.nav-link{
+    padding: 20px;
+}.header_flex{
+    justify-content: space-between;
+    display: flex;
+}
