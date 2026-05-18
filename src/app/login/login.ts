@@ -37,19 +37,30 @@ export class Login  implements OnInit{
     }
     else{
       this.userservice.get_user(this.user).subscribe(
-        data => {
-          console.log("user details is", data);
-          alert("login succesfull");
-          this.userservice.setLogin(data.token);
-          this.router.navigate(['/dashboard']);
-          this.clearfunction();
-          this.cd.detectChanges();
-        },
-        err => {
-            console.log("login failed:", err);
-            alert("invalid credentials");
-        }
-      );
+  data => {
+
+    if (!data || !data.token) {
+      console.log("Invalid response:", data);
+      alert("Login failed");
+      return;
+    }
+
+    console.log("user details is", data);
+
+    alert("login successful");
+
+    this.userservice.setLogin(data.token);
+
+    this.router.navigate(['/dashboard']);
+
+    this.clearfunction();
+    this.cd.detectChanges();
+  },
+  err => {
+    console.log("login failed:", err);
+    alert("invalid credentials");
+  }
+);
     }
   }
   clearfunction(){

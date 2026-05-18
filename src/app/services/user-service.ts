@@ -29,7 +29,7 @@ export class UserService {
     return this.http.post<any[]>(this.apiUrl+'/users/user-insert', data);
   } 
   get_user(data:any): Observable<any> {
-    return this.http.post<any[]>(this.apiUrl+'/users/user-login', data);
+    return this.http.post<any>(this.apiUrl+'/users/user-login', data);
   }
   getUserId(): number | null {
   const token = localStorage.getItem('token');
