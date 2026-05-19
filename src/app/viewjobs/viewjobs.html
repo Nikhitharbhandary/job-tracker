@@ -15,7 +15,7 @@
             <tr *ngFor="let job of jobs; let i=index">
                 <td>{{i+1}}</td>
                 <td> {{job.cname}} </td>
-                <td class="text-end "d-none d-lg-block"> {{job.role}}</td>
+                <td class="text-end d-none d-lg-block"> {{job.role}}</td>
                 <td class="text-end"> {{job.status}}</td>
                 <td class="action_row d-flex gap-3 text-center">
                     <a (click)="editProduct(job.id)">Edit</a>
