@@ -11,8 +11,21 @@
          <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <a class="nav-link" routerLink=""><i class="fa-solid fa-user"></i></a>
-        <button  (click)="logout()" class="nav-link">Logout</button>
+         <li class="nav-item">
+        <a [routerLink]="['/job-list']" routerLinkActive="active" class="nav-link text-black">
+          My Jobs
+        </a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/add-job']" routerLinkActive="active" class="nav-link text-black">
+          Add Job
+        </a>
+      </li>
+      <li class="nav-item">
+        <button  class="nav-link text-black" (click)="logout()" style="cursor:pointer;">
+          Logout
+        </button>
+      </li>
       </div>
     </div>
   </div>
