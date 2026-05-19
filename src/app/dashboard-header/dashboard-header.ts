@@ -6,7 +6,8 @@ import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-dashboard-header',
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
   templateUrl: './dashboard-header.html',
   styleUrl: './dashboard-header.css',
