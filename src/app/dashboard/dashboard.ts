@@ -7,12 +7,14 @@ import { DashboardHeader } from '../dashboard-header/dashboard-header';
 import { UserService } from '../services/user-service';
 import { Sidebar } from '../sidebar/sidebar';
 import Chart from 'chart.js/auto';
+
 @Component({
   selector: 'app-dashboard',
   imports: [
     Footer,
     CommonModule,
-    Sidebar
+    Sidebar,
+    DashboardHeader
   ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
