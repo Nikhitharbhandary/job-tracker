@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user-service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-header',
